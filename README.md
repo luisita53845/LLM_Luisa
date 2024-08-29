@@ -41,7 +41,7 @@ $ ollama list
 Para realizar una consulta utilizamos el comando curl como se muestra en el siguiente ejemplo:
 
 ````bash 
-curl -X POST http://localhost:11434/api generate -d '{
+curl -X POST http://localhost:11434/api/generate -d '{
   "model": "tinyllama",
   "prompt": "Why is the sky blue?"
 }'
@@ -52,7 +52,7 @@ curl -X POST http://localhost:11434/api generate -d '{
 Para realizar una consulta a la API REST sin stream se hace de la siguiente forma:
 
 ````bash 
-curl -X POST http://localhost:11434/api generate -d '{
+curl -X POST http://localhost:11434/api/generate -d '{
   "model": "tinyllama",
   "prompt": "Why is the sky blue?",
   "stream": false
