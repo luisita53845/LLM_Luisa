@@ -59,3 +59,27 @@ curl -X POST http://localhost:11434/api/generate -d '{
 }'
 ````
 
+## 5. Consultar a groq
+
+Estructura básica para realizar una consulta a groq mediante API REST
+
+````bash 
+curl "https://api.groq.com/openai/v1/chat/completions" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ${GROQ_API_KEY}" \
+  -d '{
+         "messages": [
+           {
+             "role": "user",
+             "content": ""
+           }
+         ],
+         "model": "llama3-8b-8192",
+         "temperature": 1,
+         "max_tokens": 1024,
+         "top_p": 1,
+         "stream": true,
+         "stop": null
+       }'
+````
